@@ -18,7 +18,8 @@ public class Main {
       System.out.println(birthday);
     } catch (ParseException e) {
 //      System.out.println("Stack trace: " + e.getStackTrace()[0].toString());
-      throw new InvalidBirthdayException("The birthday is invalid", e);
+      InvalidBirthdayException ourException = new InvalidBirthdayException("The birthday is invalid", e);
+      throw ourException;
     }
   }
 }
